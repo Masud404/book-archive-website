@@ -30,7 +30,6 @@ const searchBook = () => {
 }
 //------------------------ display book list-------------------
 const displayData = books => {
-    console.log(books)
     //--------------------- error handel-----------------------------
     if (books.length === 0) {
         errorDiv.innerHTML = 'Result No Found'
@@ -47,7 +46,7 @@ const displayData = books => {
         div.classList.add('col');
         div.innerHTML = `
             <div class="card h-100">
-            <img width='100%' height="60%"  src="https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg"class="card-img-top" alt="...">
+            <img src="https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg"class="card-img-top w-50 d-block mx-auto" alt="...">
             <div class="card-body">
                 <h5 class="card-title">${book.title}</h5>
                 <p class="card-text">Author Name: ${book.author_name}</p>
